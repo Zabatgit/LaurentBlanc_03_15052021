@@ -1,0 +1,6 @@
+@import "./utils/variables";
+
+
+.reserv__explore__content--button{
+    @include btn();
+}
