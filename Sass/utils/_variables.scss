@@ -9,9 +9,11 @@ $color-shadow: #f2f2f2;
 
 $boxShadow-size: .55rem;
 
+$content-width: 90%;
+
 
 @mixin shadow($colour: $color-shadow, $shadow-size: $boxShadow-size){
-    box-shadow: $boxShadow-size $boxShadow-size $colour;
+    box-shadow: $boxShadow-size $boxShadow-size $boxShadow-size $colour;
 }
 
 

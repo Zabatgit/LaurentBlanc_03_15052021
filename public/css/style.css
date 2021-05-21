@@ -1,10 +1,41 @@
-.reserv__explore__content--button {
+.btn {
   background: linear-gradient(to bottom right, #ff76da, #9356dc);
   color: white;
   padding: 1rem;
   border: 0;
   border-radius: 25px;
-  box-shadow: 0.55rem 0.55rem #c0c0c0;
+  box-shadow: 0.55rem 0.55rem 0.55rem #c0c0c0;
+}
+
+body {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0rem 1rem 0rem;
+}
+
+footer {
+  background-color: #353535;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 90%;
+  margin: auto;
+}
+.footer__heading {
+  font-family: "Shrikhand";
+  font-weight: lighter;
+}
+
+.footer a {
+  margin-bottom: 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

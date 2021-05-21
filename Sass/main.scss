@@ -1,6 +1,53 @@
-@import "./utils/variables";
+@import "./utils/_variables";
 
 
-.reserv__explore__content--button{
+.btn{
     @include btn();
+}
+
+body {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header__logo{
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0rem 1rem 0rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    background-color: $color-footer;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: $content-width;
+    margin: auto;
+    &__heading{
+        font-family: 'Shrikhand';
+        font-weight: lighter;;
+    }
+}
+
+.footer a {
+    margin-bottom: 0.5rem;
 }
