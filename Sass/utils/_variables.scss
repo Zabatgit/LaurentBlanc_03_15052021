@@ -4,8 +4,8 @@ $color-terciary: #99E2D0;
 $color-footer: #353535;
 $backgroundColor-primary: #f6f6f6;
 $backgroundColor-secondary: #eaeaea;
-$backgroundColor-terciary: #c0c0c0;
 $color-shadow: #f2f2f2;
+$color-shadow-darker: #c0c0c0;
 
 $boxShadow-size: .55rem;
 
@@ -23,6 +23,6 @@ $content-width: 90%;
     padding: 1rem;
     border: 0;
     border-radius: 25px;
-    @include shadow($backgroundColor-terciary, $boxShadow-size);
+    @include shadow($color-shadow-darker, $boxShadow-size);
 }
 

@@ -10,12 +10,112 @@
 body {
   margin: 0px;
   font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 24px;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+header {
+  width: 90%;
+  margin: auto;
 }
 
 .header__logo {
   display: flex;
   justify-content: center;
   padding: 2rem 0rem 1rem 0rem;
+}
+
+.reserv {
+  text-align: center;
+  background-color: #f6f6f6;
+}
+.reserv__place {
+  background-color: #eaeaea;
+  box-shadow: inset 0px 3px 3px #c0c0c0;
+}
+.reserv__place__content {
+  padding: 1rem 0rem 1rem 0rem;
+}
+.reserv__place__content i {
+  margin-right: 1rem;
+}
+.reserv__explore {
+  width: 90%;
+  margin: auto;
+  padding-bottom: 2rem;
+}
+
+.running {
+  width: 90%;
+  margin: auto;
+}
+.running__heading {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.running__content {
+  background-color: #f6f6f6;
+  margin-bottom: 1rem;
+  padding: 1rem 0rem 1rem 0rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 0.55rem 0.55rem 0.55rem #c0c0c0;
+}
+.running__content__number {
+  width: 22px;
+  height: 22px;
+  border-radius: 30px;
+  background-color: #9356DC;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.running i {
+  color: grey;
+  margin-right: 2rem;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+}
+.restaurants__heading {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+.restaurants__art {
+  width: 90%;
+  margin: auto;
+  background-color: white;
+  margin-bottom: 2rem;
+  border-radius: 20px;
+  box-shadow: 0.55rem 0.55rem 0.55rem #c0c0c0;
+}
+.restaurants__art img {
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+}
+.restaurants__art__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 0rem 1rem 1rem;
+}
+.restaurants__art__content__restName h3 {
+  margin: 0.5rem 0rem 0.2rem 0rem;
+}
+.restaurants__art__content__heart {
+  margin: 5% 5% 0 0;
+  font-size: 2rem;
+  font-weight: lighter;
 }
 
 footer {
@@ -28,6 +128,7 @@ footer {
   color: white;
   width: 90%;
   margin: auto;
+  padding-bottom: 1.5rem;
 }
 .footer__heading {
   font-family: "Shrikhand";
@@ -36,6 +137,10 @@ footer {
 
 .footer a {
   margin-bottom: 0.5rem;
+}
+
+.fa-hands-helping {
+  font-size: 11px;
 }
 
 /*# sourceMappingURL=style.css.map */

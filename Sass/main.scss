@@ -8,6 +8,18 @@
 body {
     margin: 0px;
     font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+h2{
+    font-size: 24px;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+header{
+    width: 90%;
+    margin: auto;
 }
 
 .header__logo{
@@ -16,21 +28,94 @@ body {
     padding: 2rem 0rem 1rem 0rem;
 }
 
+.reserv{
+    text-align: center;
+    background-color: $backgroundColor-primary;
+    &__place{
+        background-color: $backgroundColor-secondary;
+        box-shadow: inset 0px 3px 3px $color-shadow-darker;
+        &__content{
+            padding: 1rem 0rem 1rem 0rem;
+            & i{
+                margin-right: 1rem;
+            }
+        }
+    }
+    &__explore{
+        width: 90%;
+        margin: auto;
+        padding-bottom: 2rem;
+    }
+}
 
+.running{
+    width: 90%;
+    margin: auto;
+    &__heading{
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    &__content{
+        background-color: $backgroundColor-primary;
+        margin-bottom: 1rem;
+        padding: 1rem 0rem 1rem 0rem;
+        display: flex;
+        justify-content: center;
+        border-radius: 15px;
+        @include shadow($color-shadow-darker, $boxShadow-size);
+        &__number{
+            width: 22px;
+            height: 22px;
+            border-radius: 30px;
+            background-color: $color-primary;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            position: relative;
 
+        }
+    }
+    & i{
+        color: grey;
+        margin-right: 2rem;
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.restaurants{
+    background-color: $backgroundColor-primary;
+    &__heading{
+        width: 90%;
+        margin: auto;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+    }
+    &__art{
+        width: 90%;
+        margin: auto;
+        background-color: white;
+        margin-bottom: 2rem;
+        border-radius: 20px;
+        @include shadow($color-shadow-darker, $boxShadow-size);
+        & img{
+            width: 100%;
+            border-radius: 20px 20px 0px 0px;
+        }
+        &__content{
+            display: flex;
+            justify-content: space-between;
+            padding: 0rem 0rem 1rem 1rem;
+            &__restName h3{
+                margin: 0.5rem 0rem 0.2rem 0rem;
+            }
+            &__heart{
+                margin: 5% 5% 0 0;
+                font-size: 2rem;
+                font-weight: lighter;
+            }
+        }
+    }
+}
 
 footer{
     background-color: $color-footer;
@@ -42,6 +127,7 @@ footer{
     color: white;
     width: $content-width;
     margin: auto;
+    padding-bottom: 1.5rem;
     &__heading{
         font-family: 'Shrikhand';
         font-weight: lighter;;
@@ -50,4 +136,8 @@ footer{
 
 .footer a {
     margin-bottom: 0.5rem;
+}
+
+.fa-hands-helping {
+    font-size: 11px;
 }
