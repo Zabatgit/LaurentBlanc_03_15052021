@@ -9,13 +9,9 @@ $color-shadow-darker: #c0c0c0;
 
 $boxShadow-size: .55rem;
 
-$content-width: 90%;
-
-
 @mixin shadow($colour: $color-shadow, $shadow-size: $boxShadow-size){
     box-shadow: $boxShadow-size $boxShadow-size $boxShadow-size $colour;
 }
-
 
 @mixin btn(){
     background: linear-gradient(to bottom right, #ff76da, #9356dc);
@@ -24,5 +20,14 @@ $content-width: 90%;
     border: 0;
     border-radius: 25px;
     @include shadow($color-shadow-darker, $boxShadow-size);
+}
+
+
+$content-width: 90%;
+$content-margin: auto;
+
+@mixin pagin($width: $content-width, $margin: $content-margin){
+    width: $content-width;
+    margin: $content-margin;
 }
 

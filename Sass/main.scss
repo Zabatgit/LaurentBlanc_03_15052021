@@ -17,11 +17,6 @@ h2{
     padding-bottom: 1rem;
 }
 
-header{
-    width: 90%;
-    margin: auto;
-}
-
 .header__logo{
     display: flex;
     justify-content: center;
@@ -42,15 +37,13 @@ header{
         }
     }
     &__explore{
-        width: 90%;
-        margin: auto;
+        @include pagin();
         padding-bottom: 2rem;
     }
 }
 
 .running{
-    width: 90%;
-    margin: auto;
+    @include pagin();
     &__heading{
         margin-top: 2rem;
         margin-bottom: 1rem;
@@ -73,7 +66,6 @@ header{
             justify-content: center;
             align-items: center; 
             position: relative;
-
         }
     }
     & i{
@@ -85,33 +77,47 @@ header{
 .restaurants{
     background-color: $backgroundColor-primary;
     &__heading{
-        width: 90%;
-        margin: auto;
+        @include pagin();
         margin-bottom: 1rem;
         margin-top: 2rem;
     }
     &__art{
-        width: 90%;
-        margin: auto;
+        @include pagin();
         background-color: white;
         margin-bottom: 2rem;
         border-radius: 20px;
         @include shadow($color-shadow-darker, $boxShadow-size);
         & img{
             width: 100%;
+            object-fit: cover;
             border-radius: 20px 20px 0px 0px;
+        }
+        &__img{
+            display: flex;
+            justify-content: end;
+            height: 17rem;
+            & p{
+                background-color: $color-terciary;
+                color: green;
+                position: absolute;
+                padding: 0.5rem 1rem 0.5rem 1rem;
+                border-radius: 0.2rem;
+                margin-right: 1rem;
+            }
         }
         &__content{
             display: flex;
             justify-content: space-between;
             padding: 0rem 0rem 1rem 1rem;
             &__restName h3{
-                margin: 0.5rem 0rem 0.2rem 0rem;
+                margin: 1rem 0rem 0.5rem 0rem;
+            }
+            &__restName p{
+                margin: 0;
             }
             &__heart{
                 margin: 5% 5% 0 0;
-                font-size: 2rem;
-                font-weight: lighter;
+                font-size: 1.5rem;
             }
         }
     }
@@ -125,17 +131,15 @@ footer{
     display: flex;
     flex-direction: column;
     color: white;
-    width: $content-width;
-    margin: auto;
+    @include pagin();
     padding-bottom: 1.5rem;
     &__heading{
         font-family: 'Shrikhand';
-        font-weight: lighter;;
+        font-weight: lighter;
     }
-}
-
-.footer a {
-    margin-bottom: 0.5rem;
+    & a{
+        margin-bottom: 0.5rem;        
+    }
 }
 
 .fa-hands-helping {

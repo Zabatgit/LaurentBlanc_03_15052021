@@ -19,11 +19,6 @@ h2 {
   padding-bottom: 1rem;
 }
 
-header {
-  width: 90%;
-  margin: auto;
-}
-
 .header__logo {
   display: flex;
   justify-content: center;
@@ -102,7 +97,21 @@ header {
 }
 .restaurants__art img {
   width: 100%;
+  object-fit: cover;
   border-radius: 20px 20px 0px 0px;
+}
+.restaurants__art__img {
+  display: flex;
+  justify-content: end;
+  height: 17rem;
+}
+.restaurants__art__img p {
+  background-color: #99E2D0;
+  color: green;
+  position: absolute;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.2rem;
+  margin-right: 1rem;
 }
 .restaurants__art__content {
   display: flex;
@@ -110,12 +119,14 @@ header {
   padding: 0rem 0rem 1rem 1rem;
 }
 .restaurants__art__content__restName h3 {
-  margin: 0.5rem 0rem 0.2rem 0rem;
+  margin: 1rem 0rem 0.5rem 0rem;
+}
+.restaurants__art__content__restName p {
+  margin: 0;
 }
 .restaurants__art__content__heart {
   margin: 5% 5% 0 0;
-  font-size: 2rem;
-  font-weight: lighter;
+  font-size: 1.5rem;
 }
 
 footer {
@@ -134,7 +145,6 @@ footer {
   font-family: "Shrikhand";
   font-weight: lighter;
 }
-
 .footer a {
   margin-bottom: 0.5rem;
 }
