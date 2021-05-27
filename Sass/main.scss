@@ -17,6 +17,10 @@ h2{
     padding-bottom: 1rem;
 }
 
+a{
+    text-decoration: none;
+}
+
 .header__logo{
     display: flex;
     justify-content: center;
@@ -138,7 +142,11 @@ footer{
         font-weight: lighter;
     }
     & a{
-        margin-bottom: 0.5rem;        
+        margin-bottom: 0.5rem;
+        color: white;
+        &:hover{
+            color: grey;
+        }        
     }
 }
 
