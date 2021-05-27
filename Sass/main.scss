@@ -94,7 +94,7 @@ h2{
         }
         &__img{
             display: flex;
-            justify-content: end;
+            justify-content: flex-end;
             height: 17rem;
             & p{
                 background-color: $color-terciary;
