@@ -7,7 +7,7 @@ $backgroundColor-secondary: #eaeaea;
 $color-shadow: #f2f2f2;
 $color-shadow-darker: #c0c0c0;
 
-$boxShadow-size: .55rem;
+$boxShadow-size: .40rem;
 
 @mixin shadow($colour: $color-shadow, $shadow-size: $boxShadow-size){
     box-shadow: $boxShadow-size $boxShadow-size $boxShadow-size $colour;
