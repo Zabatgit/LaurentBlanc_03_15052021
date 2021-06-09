@@ -222,7 +222,7 @@ h1{
         font-weight: 400 ;
         font-size: 20px;
         text-transform: uppercase;
-        border-bottom: 2px solid $color-terciary;
+        /*border-bottom: 2px solid $color-terciary;*/
     }
     &__name{
         @include shadow($color-shadow-darker, $boxShadow-size);
@@ -236,6 +236,11 @@ h1{
             display: flex;
             justify-content: space-between;
             padding: 0 1rem 0 1rem;
+        }
+        &__underline{
+            width: 100px;
+            background-color: red;
+            /*border-bottom: 2px solid $color-terciary;*/
         }
     }
 }
