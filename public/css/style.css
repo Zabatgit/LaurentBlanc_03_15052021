@@ -191,11 +191,7 @@ footer {
 
 .image {
   width: 100%;
-  margin-bottom: 0;
-}
-.image img {
-  width: 100%;
-  margin-bottom: 0;
+  background-image: url(../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
 }
 
 h1 {
@@ -225,11 +221,19 @@ h1 {
   width: 90%;
   margin: auto;
 }
-.content h2 {
+.content__title {
+  display: inline-block;
+}
+.content__title h2 {
   font-weight: 400;
   font-size: 20px;
   text-transform: uppercase;
-  border-bottom: 2px solid #99E2D0;
+  margin: 0;
+  padding: 2rem 0rem 0.5rem 0rem;
+}
+.content__title__underline {
+  border-bottom: 4px solid #99E2D0;
+  width: 3rem;
 }
 .content__name {
   box-shadow: 0.4rem 0.4rem 0.4rem #c0c0c0;
