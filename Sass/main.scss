@@ -3,6 +3,9 @@
 
 .btn{
     @include btn();
+    &:hover{
+        @include shadow($color-shadow-darkerMore, $boxShadow-sizeMore);
+    }
 }
 
 body {

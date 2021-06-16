@@ -2,15 +2,19 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-terciary: #99E2D0;
 $color-footer: #353535;
+
 $backgroundColor-primary: #f6f6f6;
 $backgroundColor-secondary: #eaeaea;
+
 $color-shadow: #f2f2f2;
 $color-shadow-darker: #c0c0c0;
+$color-shadow-darkerMore: #a8a8a8;
 
 $boxShadow-size: .40rem;
+$boxShadow-sizeMore: .45rem;
 
 @mixin shadow($colour: $color-shadow, $shadow-size: $boxShadow-size){
-    box-shadow: $boxShadow-size $boxShadow-size $boxShadow-size $colour;
+    box-shadow: $shadow-size $shadow-size $shadow-size $colour;
 }
 
 @mixin btn(){
@@ -27,7 +31,7 @@ $content-width: 90%;
 $content-margin: auto;
 
 @mixin pagin($width: $content-width, $margin: $content-margin){
-    width: $content-width;
-    margin: $content-margin;
+    width: $width;
+    margin: $margin;
 }
 

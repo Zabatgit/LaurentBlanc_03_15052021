@@ -6,6 +6,9 @@
   border-radius: 25px;
   box-shadow: 0.4rem 0.4rem 0.4rem #c0c0c0;
 }
+.btn:hover {
+  box-shadow: 0.45rem 0.45rem 0.45rem #a8a8a8;
+}
 
 body {
   margin: 0px;
