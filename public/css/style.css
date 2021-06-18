@@ -1,13 +1,31 @@
 .btn {
-  background: linear-gradient(to bottom right, #ff76da, #9356dc);
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   color: white;
   padding: 1rem;
   border: 0;
   border-radius: 25px;
   box-shadow: 0.4rem 0.4rem 0.4rem #c0c0c0;
+  position: relative;
+  z-index: 1;
 }
 .btn:hover {
-  box-shadow: 0.45rem 0.45rem 0.45rem #a8a8a8;
+  box-shadow: 0.5rem 0.5rem 0.5rem #a8a8a8;
+}
+.btn:hover::after {
+  opacity: 1;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 25px;
+  background: linear-gradient(to bottom right, #ff93e1, #a16be0);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
 }
 
 body {
@@ -162,6 +180,9 @@ a {
 .restaurants__art__content__heart {
   margin: 5% 5% 0 0;
   font-size: 1.5rem;
+  /*& i{
+      background-color: $color-primary;
+  }*/
 }
 
 footer {
@@ -195,7 +216,6 @@ footer {
 .image {
   position: relative;
   z-index: -1;
-  height: 21rem;
 }
 .image img {
   width: 100%;

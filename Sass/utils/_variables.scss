@@ -11,14 +11,14 @@ $color-shadow-darker: #c0c0c0;
 $color-shadow-darkerMore: #a8a8a8;
 
 $boxShadow-size: .40rem;
-$boxShadow-sizeMore: .45rem;
+$boxShadow-sizeMore: .50rem;
 
 @mixin shadow($colour: $color-shadow, $shadow-size: $boxShadow-size){
     box-shadow: $shadow-size $shadow-size $shadow-size $colour;
 }
 
 @mixin btn(){
-    background: linear-gradient(to bottom right, #ff76da, #9356dc);
+    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
     color: white;
     padding: 1rem;
     border: 0;

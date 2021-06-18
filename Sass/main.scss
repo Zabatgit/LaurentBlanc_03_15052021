@@ -3,8 +3,26 @@
 
 .btn{
     @include btn();
+    position: relative;
+    z-index: 1;
     &:hover{
         @include shadow($color-shadow-darkerMore, $boxShadow-sizeMore);
+        &::after{
+            opacity: 1;
+        }
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 25px;
+        background: linear-gradient(to bottom right, lighten($color-secondary, 5), lighten($color-primary, 5));
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
     }
 }
 
@@ -153,6 +171,9 @@ a{
             &__heart{
                 margin: 5% 5% 0 0;
                 font-size: 1.5rem;
+                /*& i{
+                    background-color: $color-primary;
+                }*/
             }
         }
     }
@@ -185,12 +206,9 @@ footer{
     font-size: 11px;
 }
 
-
-
 .image{
     position: relative;
     z-index: -1;
-    height: 21rem;
     & img{
         width: 100%;
     }
