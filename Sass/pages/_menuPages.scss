@@ -1,0 +1,76 @@
+@import "../utils/variables";
+@import "../layout/header.scss";
+@import "../layout/footer.scss";
+@import "../utils/mixins";
+@import "../composants/button.scss";
+
+.image{
+    position: relative;
+    z-index: -1;
+    & img{
+        width: 100%;
+    }
+}
+
+.menu{
+    background-color: $backgroundColor-primary;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    width: 100%;
+    margin-top: -4rem;
+    &__title{
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 3rem;
+        font-size: 20px;
+        & i{
+            padding-top: 0.5rem;
+            font-size: 30px;
+        }
+    }
+}
+.content{
+    @include pagin();
+    &__title{
+        display: inline-block;
+        & h2{
+            font-weight: 400 ;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 2rem 0rem 0.5rem 0rem;
+        }
+        &__underline{
+            border-bottom: 3px solid $color-terciary;
+            width: 3rem;
+        }
+    }
+    &__name{
+        @include shadow($color-shadow-darker, $boxShadow-size);
+        background-color: white;
+        border-radius: 20px;
+        & h3{
+            margin-bottom: 0px;
+            padding: 1rem 0 0 1rem;
+        }
+        & div{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1rem 0 1rem;
+        }
+    }
+}
+
+.btnOrder{
+    padding: 1rem 3rem 1rem 3rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    & a{
+        color: white;
+    }
+}
+
+.order{
+    display: flex;
+    justify-content: space-around;
+}

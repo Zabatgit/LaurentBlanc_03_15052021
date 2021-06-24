@@ -1,0 +1,56 @@
+@import "../utils/mixins";
+
+footer{
+    background-color: $color-footer;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    @include pagin();
+    padding-bottom: 1.5rem;
+    &__heading{
+        font-family: 'Shrikhand';
+        font-weight: lighter;
+    }
+    @include tabletOnly {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    @include desktopOnly {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    & h3{
+        @include tabletOnly{
+            width: 100%;
+        }
+        @include desktopOnly{
+            width: 100%;
+        }
+    }
+    & a{
+        margin-bottom: 0.5rem;
+        color: white;
+        &:hover{
+            color: grey;
+        }  
+        @include tabletOnly{
+            margin-right: 2rem;
+        }
+        @include desktopOnly{
+            margin-right: 2rem;
+        }
+    }
+}
+
+.fa-hands-helping {
+    font-size: 11px;
+    @include tabletOnly{
+        font-size: 16px;
+    }
+    @include desktopOnly{
+        font-size: 16px;
+    }
+}

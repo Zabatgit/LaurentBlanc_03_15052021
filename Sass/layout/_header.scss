@@ -1,0 +1,26 @@
+.header__logo{
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0rem 1rem 0rem;
+}
+
+.header__return{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.header__return__arrow{
+    position: absolute;
+    padding: 2.5rem 0rem 1rem 0rem;
+    margin-left: -85%;
+    & a{
+        color: black;
+        &:hover{
+            background-color: $backgroundColor-primary;
+            padding: 0.3rem 0.4rem 0.3rem 0.4rem;
+            border: 1px solid $backgroundColor-secondary;
+            border-radius: 4px;
+        }
+    }
+}

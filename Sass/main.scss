@@ -1,30 +1,10 @@
-@import "./utils/_variables";
+@import "./utils/variables";
+@import "./layout/header.scss";
+@import "./layout/footer.scss";
+@import "./utils/mixins";
+@import "./composants/button.scss";
+@import "./pages/menuPages.scss";
 
-
-.btn{
-    @include btn();
-    position: relative;
-    z-index: 1;
-    &:hover{
-        @include shadow($color-shadow-darkerMore, $boxShadow-sizeMore);
-        &::after{
-            opacity: 1;
-        }
-    }
-    &::after{
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        border-radius: 25px;
-        background: linear-gradient(to bottom right, lighten($color-secondary, 5), lighten($color-primary, 5));
-        opacity: 0;
-        z-index: -1;
-        transition: opacity 250ms;
-    }
-}
 
 body {
     margin: 0px;
@@ -42,31 +22,10 @@ a{
     text-decoration: none;
 }
 
-.header__logo{
-    display: flex;
-    justify-content: center;
-    padding: 2rem 0rem 1rem 0rem;
-}
-
-.header__return{
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-}
-
-.header__return__arrow{
-    position: absolute;
-    padding: 2.5rem 0rem 1rem 0rem;
-    margin-left: -85%;
-    & a{
-        color: black;
-        &:hover{
-            background-color: $backgroundColor-primary;
-            padding: 0.3rem 0.4rem 0.3rem 0.4rem;
-            border: 1px solid $backgroundColor-secondary;
-            border-radius: 4px;
-        }
-    }
+h1{
+    margin: 0;
+    font-family: 'Shrikhand';
+    font-weight: lighter;
 }
 
 .reserv{
@@ -206,136 +165,3 @@ a{
         }
     }
 }
-
-footer{
-    background-color: $color-footer;
-}
-
-.footer{
-    display: flex;
-    flex-direction: column;
-    color: white;
-    @include pagin();
-    padding-bottom: 1.5rem;
-    &__heading{
-        font-family: 'Shrikhand';
-        font-weight: lighter;
-    }
-    @include tabletOnly {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    @include desktopOnly {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    & h3{
-        @include tabletOnly{
-            width: 100%;
-        }
-        @include desktopOnly{
-            width: 100%;
-        }
-    }
-    & a{
-        margin-bottom: 0.5rem;
-        color: white;
-        &:hover{
-            color: grey;
-        }  
-        @include tabletOnly{
-            margin-right: 2rem;
-        }
-        @include desktopOnly{
-            margin-right: 2rem;
-        }
-    }
-}
-
-.fa-hands-helping {
-    font-size: 11px;
-    @include tabletOnly{
-        font-size: 16px;
-    }
-    @include desktopOnly{
-        font-size: 16px;
-    }
-}
-
-.image{
-    position: relative;
-    z-index: -1;
-    & img{
-        width: 100%;
-    }
-}
-
-h1{
-    margin: 0;
-    font-family: 'Shrikhand';
-    font-weight: lighter;
-}
-
-.menu{
-    background-color: $backgroundColor-primary;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    width: 100%;
-    margin-top: -4rem;
-    &__title{
-        display: flex;
-        justify-content: space-evenly;
-        padding-top: 3rem;
-        font-size: 20px;
-        & i{
-            padding-top: 0.5rem;
-            font-size: 30px;
-        }
-    }
-}
-.content{
-    @include pagin();
-    &__title{
-        display: inline-block;
-        & h2{
-            font-weight: 400 ;
-            font-size: 20px;
-            text-transform: uppercase;
-            margin: 0;
-            padding: 2rem 0rem 0.5rem 0rem;
-        }
-        &__underline{
-            border-bottom: 3px solid $color-terciary;
-            width: 3rem;
-        }
-    }
-    &__name{
-        @include shadow($color-shadow-darker, $boxShadow-size);
-        background-color: white;
-        border-radius: 20px;
-        & h3{
-            margin-bottom: 0px;
-            padding: 1rem 0 0 1rem;
-        }
-        & div{
-            display: flex;
-            justify-content: space-between;
-            padding: 0 1rem 0 1rem;
-        }
-    }
-}
-
-.btnOrder{
-    padding: 1rem 3rem 1rem 3rem;
-    margin-top: 3rem;
-    margin-bottom: 4rem;
-    & a{
-        color: white;
-    }
-}
-
-.order{
-    display: flex;
-    justify-content: space-around;
-}
-

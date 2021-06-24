@@ -13,43 +13,11 @@ $color-shadow-darkerMore: #a8a8a8;
 $boxShadow-size: .40rem;
 $boxShadow-sizeMore: .50rem;
 
-
-@mixin shadow($colour: $color-shadow, $shadow-size: $boxShadow-size){
-    box-shadow: $shadow-size $shadow-size $shadow-size $colour;
-}
-
-@mixin btn(){
-    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
-    color: white;
-    padding: 1rem;
-    border: 0;
-    border-radius: 25px;
-    @include shadow($color-shadow-darker, $boxShadow-size);
-}
-
-
 $content-width: 90%;
 $content-margin: auto;
-
-@mixin pagin($width: $content-width, $margin: $content-margin){
-    width: $width;
-    margin: $margin;
-}
 
 $breakpoints: (
     tablet: 501px,
     tabletMax: 1024px,
     desktop: 1025px
 );
-
-@mixin tabletOnly {
-    @media screen and (min-width: map-get($breakpoints, tablet )) and (max-width: map-get($breakpoints, tabletMax)){
-        @content;
-    }
-}
-
-@mixin desktopOnly {
-    @media screen and (min-width: map-get($breakpoints, desktop)){
-        @content;
-    }
-}
