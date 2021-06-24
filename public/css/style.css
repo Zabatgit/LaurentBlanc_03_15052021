@@ -150,6 +150,7 @@ a {
 }
 .restaurants__art img {
   width: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 20px 20px 0px 0px;
 }

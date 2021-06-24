@@ -13,6 +13,7 @@ $color-shadow-darkerMore: #a8a8a8;
 $boxShadow-size: .40rem;
 $boxShadow-sizeMore: .50rem;
 
+
 @mixin shadow($colour: $color-shadow, $shadow-size: $boxShadow-size){
     box-shadow: $shadow-size $shadow-size $shadow-size $colour;
 }
@@ -35,3 +36,20 @@ $content-margin: auto;
     margin: $margin;
 }
 
+$breakpoints: (
+    tablet: 501px,
+    tabletMax: 1024px,
+    desktop: 1025px
+);
+
+@mixin tabletOnly {
+    @media screen and (min-width: map-get($breakpoints, tablet )) and (max-width: map-get($breakpoints, tabletMax)){
+        @content;
+    }
+}
+
+@mixin desktopOnly {
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        @content;
+    }
+}
