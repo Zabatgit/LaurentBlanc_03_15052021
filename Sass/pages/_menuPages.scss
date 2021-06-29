@@ -7,6 +7,9 @@
 .image{
     position: relative;
     z-index: -1;
+    @include desktopOnly{
+        height: 40rem;
+    }
     & img{
         width: 100%;
     }
@@ -18,19 +21,70 @@
     border-top-right-radius: 50px;
     width: 100%;
     margin-top: -4rem;
+    
     &__title{
         display: flex;
         justify-content: space-evenly;
         padding-top: 3rem;
         font-size: 20px;
+        width: 100%;
+        @include desktopOnly{
+            margin: 0 0 3rem 0;
+        }
         & i{
             padding-top: 0.5rem;
             font-size: 30px;
+        }
+        &__heart{
+            font-size: 30px;
+            height: 3rem;
+            width: 2rem;
+            background-color: transparent;
+            border: transparent 0px solid;
+            padding: 0;
+            cursor: pointer;
+            position: relative;
+            background-color: black;
+            &:hover::before{
+                opacity: 1;
+            }
+            &::before{
+                opacity: 0;
+                transition: 0.5s;
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background:linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);
+            }
+            & i{
+                transition-duration: .25s;
+                background-color: $backgroundColor-primary;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                mix-blend-mode: lighten;
+            }
+            &:hover{
+                .far{
+                    opacity: 0;
+                }
+            }
         }
     }
 }
 .content{
     @include pagin();
+    @include desktopOnly{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
     &__title{
         display: inline-block;
         & h2{
@@ -39,19 +93,34 @@
             text-transform: uppercase;
             margin: 0;
             padding: 2rem 0rem 0.5rem 0rem;
+            @include desktopOnly{
+                width: 7rem;
+                margin-left: -2rem;
+                margin-top: 2rem;
+            }
         }
         &__underline{
             border-bottom: 3px solid $color-terciary;
             width: 3rem;
+            @include desktopOnly{
+                margin-left: -2rem;
+            }
         }
     }
     &__name{
         @include shadow($color-shadow-darker, $boxShadow-size);
         background-color: white;
         border-radius: 20px;
+        @include desktopOnly{
+            width: 30%;
+            margin-top: 2rem;
+        }
         & h3{
             margin-bottom: 0px;
             padding: 1rem 0 0 1rem;
+            @include desktopOnly{
+                margin-top: 0;
+            }
         }
         & div{
             display: flex;

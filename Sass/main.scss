@@ -5,6 +5,8 @@
 @import "./composants/button.scss";
 @import "./pages/menuPages.scss";
 @import "./base/rules.scss";
+@import "./utils/animations";
+@import "./composants/loader.scss";
 
 
 .reserv{
@@ -138,8 +140,45 @@
                 margin: 0;
             }
             &__heart{
-                margin: 5% 5% 0 0;
-                font-size: 1.5rem;
+                margin: 1.5rem 1rem 0 0;
+                font-size: 30px;
+                height: 2rem;
+                width: 2rem;
+                background-color: transparent;
+                border: transparent 0px solid;
+                padding: 0;
+                cursor: pointer;
+                position: relative;
+                background-color: black;
+                &:hover::before{
+                    opacity: 1;
+                }
+                &::before{
+                    opacity: 0;
+                    transition: 0.5s;
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background:linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);
+                }
+                & i{
+                    transition-duration: .25s;
+                    background-color: #ffffff;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    mix-blend-mode: lighten;
+                }
+                &:hover{
+                    .far{
+                        opacity: 0;
+                    }
+                }
             }
         }
     }
