@@ -3,6 +3,7 @@
 @import "../layout/footer.scss";
 @import "../utils/mixins";
 @import "../composants/button.scss";
+@import "../utils/animations.scss";
 
 .image{
     position: relative;
@@ -115,17 +116,69 @@
             width: 30%;
             margin-top: 2rem;
         }
+        overflow: hidden;
+        cursor: pointer;
+        animation: itemAppear .6s;
+        animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+        animation-fill-mode: both;
+        transform: scale(0);
+        max-width: 100%;
         & h3{
             margin-bottom: 0px;
             padding: 1rem 0 0 1rem;
             @include desktopOnly{
                 margin-top: 0;
             }
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
         & div{
             display: flex;
             justify-content: space-between;
             padding: 0 1rem 0 1rem;
+            & p:first-child{
+                white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            }
+            & p:nth-child(2){
+                font-weight: bold;
+            }
+        }
+    &__confirmation {
+        background-color: $color-terciary;
+        margin: -1rem -5rem -1rem 1rem;
+        width: 4rem;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        transition-duration: 0.5s;
+        &__wrapIcon {
+            height: 1.6rem;
+            width: 1.6rem;
+            background-color: white;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            border-radius: 100px;
+            transform: rotate(180deg);
+            transition-duration: 0.5s;
+       }
+    }
+    &:hover &__confirmation {
+        margin-right: -1rem;
+    }
+    &:hover &__wrapIcon {
+        transform: rotate(0);
+    }
+    &__icon {
+        color: $color-terciary;
+    }
+    @for $i from 0 to 9 {
+            .delay-#{$i} {
+                animation-delay:  #{$i/10}s;
+            }
         }
     }
 }
