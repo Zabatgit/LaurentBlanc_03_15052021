@@ -10,6 +10,7 @@
     padding: 1rem;
     border: 0;
     border-radius: 25px;
+    cursor: pointer;
     @include shadow($color-shadow-darker, $boxShadow-size);
 }
 
