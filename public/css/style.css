@@ -1404,6 +1404,7 @@ h1 {
   height: 100%;
   width: 100%;
   mix-blend-mode: lighten;
+  text-align: center;
 }
 .restaurants__art__content__heart:hover .far {
   opacity: 0;
