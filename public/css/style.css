@@ -435,7 +435,7 @@ footer {
 }
 @media screen and (min-width: 1025px) {
   .content__name {
-    margin: 2rem 0 0 2rem;
+    margin: 2rem 0 1rem 2rem;
     max-width: 80%;
   }
 }
@@ -1075,7 +1075,7 @@ footer {
 }
 @media screen and (min-width: 1025px) {
   .content__name {
-    margin: 2rem 0 0 2rem;
+    margin: 2rem 0 1rem 2rem;
     max-width: 80%;
   }
 }
