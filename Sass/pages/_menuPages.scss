@@ -9,10 +9,15 @@
     position: relative;
     z-index: -1;
     @include desktopOnly{
-        height: 40rem;
+        height: 35rem;
     }
     & img{
         width: 100%;
+        @include desktopOnly{
+        height: 45rem;
+        -o-object-fit: cover;
+            object-fit: cover;
+        }
     }
 }
 
@@ -22,7 +27,10 @@
     border-top-right-radius: 50px;
     width: 100%;
     margin-top: -4rem;
-    
+    @include desktopOnly{
+        width: 80%;
+        margin: auto;
+    }
     &__title{
         display: flex;
         justify-content: space-evenly;
@@ -30,7 +38,8 @@
         font-size: 20px;
         width: 100%;
         @include desktopOnly{
-            margin: 0 0 3rem 0;
+            padding: 3rem 0 3rem 2rem;
+            justify-content: space-between;
         }
         & i{
             padding-top: 0.5rem;
@@ -47,6 +56,9 @@
             position: relative;
             text-align: center;
             background-color: black;
+            @include desktopOnly{
+                margin-right: 6rem;
+            }
             &:hover::before{
                 opacity: 1;
             }
@@ -79,32 +91,41 @@
         }
     }
 }
+
+.coco{
+    @include desktopOnly{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+}
+
 .content{
     @include pagin();
     @include desktopOnly{
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        flex-direction: column;
+        white-space: nowrap;
+        overflow: hidden;
     }
     &__title{
         & h2{
             font-weight: 400 ;
             font-size: 20px;
             text-transform: uppercase;
-            margin: 0;
+            margin: 0rem 0rem 0rem 1rem;
             padding: 2rem 0rem 0.5rem 0rem;
             @include desktopOnly{
                 width: 7rem;
-                margin-left: -2rem;
-                margin-top: 2rem;
+                margin: 0rem 0rem 0rem 2rem;
             }
         }
         &__underline{
             border-bottom: 3px solid $color-terciary;
             width: 3rem;
+            margin: 0 0 0 1rem;
             @include desktopOnly{
-                margin-left: -2rem;
+                margin: 0rem 0rem 0rem 2rem;
             }
         }
     }
@@ -112,18 +133,18 @@
         @include shadow($color-shadow-darker, $boxShadow-size);
         background-color: white;
         border-radius: 20px;
-        margin: 1rem 0 1rem 0;
+        margin: 1rem 1rem 1rem 1rem;
         display: flex;
         justify-content: space-between;
         @include desktopOnly{
-            width: 30%;
-            margin-top: 2rem;
+            margin: 2rem 0 0 2rem;
+            max-width: 80%;
         }
         overflow: hidden;
+        white-space: nowrap;
         cursor: pointer;
         animation: fadein 600ms;
         animation-fill-mode: both;
-        max-width: 100%;
         &--column{
             display: flex;
             flex-direction: column;
@@ -143,40 +164,44 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-    }
-    &__side{
-        display: flex;
-        align-items: center;
-        padding: 0px;
-        &__price{
-            margin-right: 1.5rem;
+        &--clic{
             display: flex;
-            justify-content: center;
-            font-weight: bold;
-            &:hover + .content__side__wrapIcon{
-                display: flex;
+            justify-content: space-between;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            &:hover + .content__name__side{
+                margin-right: 0rem;
+                transform: rotate(0);
             }
         }
-        &__wrapIcon{
-            width: 6rem;
-            height: 100%;
+        &__price{
+            font-weight: bold;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            align-items: flex-end;
+            margin: 0 1rem 1rem 0;
+        }
+        &__side{
             background-color: $color-terciary;
-            border-top-right-radius: 19px;
-            border-bottom-right-radius: 19px;
-            /*transform: rotate(180deg);*/
-            transition-duration: 0.5s;
-            display: none;
-            /*&:hover &__wrapIcon{
-                transform: rotate(0);
-            }*/
+            margin: -1rem -6rem -1rem 1rem;
+            width: 6rem;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            transform: rotate(180deg);
+            transition-duration: 500ms;
+            &__icon{
+                height: 1.6rem;
+                width: 1.6rem;
+                background-color: white;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                border-radius: 100px;
+            }
             & .fa-check{
                 color: $color-terciary;
-                background-color: white;
-                border-radius: 100px;
-                padding: 0.5rem;
             }
         }
     }
