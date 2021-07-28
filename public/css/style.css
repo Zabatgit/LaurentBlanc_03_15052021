@@ -1428,6 +1428,13 @@ h1 {
 .restaurants__art__content__restName h3 {
   margin: 1rem 0rem 0.5rem 0rem;
 }
+@media screen and (min-width: 1025px) {
+  .restaurants__art__content__restName h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
 .restaurants__art__content__restName p {
   margin: 0;
 }

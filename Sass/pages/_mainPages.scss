@@ -108,6 +108,7 @@
         }
         @include desktopOnly {
             width: 20%;
+            
         }
         & img{
             width: 100%;
@@ -134,6 +135,11 @@
             padding: 0rem 0rem 1rem 1rem;
             &__restName h3{
                 margin: 1rem 0rem 0.5rem 0rem;
+                @include desktopOnly{
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
             }
             &__restName p{
                 margin: 0;
