@@ -403,6 +403,7 @@ footer {
     flex-direction: column;
     white-space: nowrap;
     overflow: hidden;
+    margin: 0;
   }
 }
 .content__title h2 {
@@ -440,6 +441,8 @@ footer {
   overflow: hidden;
   text-overflow: ellipsis;
   cursor: pointer;
+  animation: fadein 600ms;
+  animation-fill-mode: both;
 }
 .content__container__row {
   display: flex;
@@ -534,6 +537,14 @@ footer {
 
 .delay-8 {
   animation-delay: 0.8s;
+}
+
+.delay-9 {
+  animation-delay: 0.9s;
+}
+
+.delay-10 {
+  animation-delay: 1s;
 }
 
 .btnOrder {
@@ -1052,6 +1063,7 @@ footer {
     flex-direction: column;
     white-space: nowrap;
     overflow: hidden;
+    margin: 0;
   }
 }
 .content__title h2 {
@@ -1089,6 +1101,8 @@ footer {
   overflow: hidden;
   text-overflow: ellipsis;
   cursor: pointer;
+  animation: fadein 600ms;
+  animation-fill-mode: both;
 }
 .content__container__row {
   display: flex;
@@ -1183,6 +1197,14 @@ footer {
 
 .delay-8 {
   animation-delay: 0.8s;
+}
+
+.delay-9 {
+  animation-delay: 0.9s;
+}
+
+.delay-10 {
+  animation-delay: 1s;
 }
 
 .btnOrder {
