@@ -125,84 +125,79 @@
             width: 3rem;
             margin: 0 0 0 1rem;
             @include desktopOnly{
-                margin: 0rem 0rem 0rem 2rem;
+                margin: 0rem 0rem 1rem 2rem;
             }
         }
     }
-    &__name{
-        @include shadow($color-shadow-darker, $boxShadow-size);
+    &__container {
         background-color: white;
-        border-radius: 20px;
-        margin: 1rem 1rem 1rem 1rem;
+        border-radius: 30px;
+        @include shadow($color-shadow-darker, $boxShadow-size);
+        margin: 1rem 1.5rem 1rem 1.5rem;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
-        @include desktopOnly{
-            margin: 2rem 0 1rem 2rem;
-            max-width: 80%;
-        }
-        overflow: hidden;
         white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         cursor: pointer;
-        animation: fadein 600ms;
-        animation-fill-mode: both;
-        &--column{
+        &__row{
             display: flex;
-            flex-direction: column;
-            white-space: nowrap;
-            overflow: hidden;
-            padding-left: 1rem;
-        }
-        & h3{
-            padding: 1rem 0 0 0;
-            margin: 0;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        & p{
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        &--clic{
-            display: flex;
+            flex-direction: row;
             justify-content: space-between;
             width: 100%;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            &:hover + .content__name__side{
-                margin-right: 0rem;
-                transform: rotate(0);
+        }
+        &__menu {
+            display: flex;
+            flex-direction: column;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            & h3{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin: 1rem 0 1rem 1rem;
+            }
+            & p {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin: 0rem 0 1rem 1rem;
             }
         }
-        &__price{
+        &__price {
             font-weight: bold;
-            display: flex;
-            align-items: flex-end;
-            margin: 0 1rem 1rem 0;
+            margin: 3.5rem 2rem 0 0;
         }
-        &__side{
-            background-color: $color-terciary;
-            margin: -1rem -6rem -1rem 1rem;
-            width: 6rem;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            transform: rotate(180deg);
-            transition-duration: 500ms;
-            &__icon{
+        &__check {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 0;
+            overflow: hidden;
+            background-color: #99E2D0;
+            transition: ease-out 0.7s;
+            & .fa-check {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                color: #99E2D0;
                 height: 1.6rem;
                 width: 1.6rem;
-                background-color: white;
-                display:flex;
-                align-items:center;
-                justify-content:center;
                 border-radius: 100px;
             }
-            & .fa-check{
-                color: $color-terciary;
-            }
+        }
+        &:hover .content__container__check {
+            width: 5rem;
+            transition: ease-in 400ms;
+        }
+        &:hover .fa-check {
+            animation: rotate 600ms;
         }
     }
 }
