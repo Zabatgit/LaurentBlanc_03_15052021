@@ -577,12 +577,50 @@ a {
   text-decoration: none;
 }
 
-h1 {
+.title {
   margin: 0;
+  padding: 0.4rem 0 0 0;
   font-family: "Shrikhand";
   font-weight: lighter;
+  font-size: 32px;
 }
 
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0.5rem);
+  }
+  75% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes loader {
   100% {
     opacity: 0;
@@ -1237,12 +1275,50 @@ a {
   text-decoration: none;
 }
 
-h1 {
+.title {
   margin: 0;
+  padding: 0.4rem 0 0 0;
   font-family: "Shrikhand";
   font-weight: lighter;
+  font-size: 32px;
 }
 
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0.5rem);
+  }
+  75% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes loader {
   100% {
     opacity: 0;
